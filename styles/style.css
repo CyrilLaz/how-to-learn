@@ -9,6 +9,14 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+/** {
+  border: solid 1px red;
+}*/
+
+.border {
+  border: solid 1px red;
+}
+
 .header {
   height: 100vh;
   min-height: 600px;
