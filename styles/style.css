@@ -13,21 +13,30 @@
   border: solid 1px red;
 }*/
 
-.border {
+* {
   border: solid 1px red;
 }
 
 .header {
+  /*display: flex;*/
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
 }
 
+.header__logo {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+.logo_place_header
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
   width: 568px;
+  background-color: blue;
 }
 
 /* и элемента с модификатором вида ключ-значение */
