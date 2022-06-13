@@ -278,21 +278,13 @@ justify-content: space-between;
 margin:60px auto 40px auto;
 }
 
-.footer__columns_content_copyright {
+.footer__columns_content {
   display: flex;
   flex-direction: column;
+}
+.footer__columns_content_copyright {
   justify-content: space-between;
   flex-basis: 711px;
-}
-
-.footer__columns_content_info {
-display: flex;
-flex-direction: column;
-}
-
-.footer__columns_content_social {
-display: flex;
-flex-direction: column;
 }
 
 .logo_place_footer {
