@@ -138,7 +138,7 @@
   text-align: center;
 }
 
-.table-title {
+.section-title {
   width: 60%;
   margin: 0px 0px 20px 0px;
   line-height: 1.15;
@@ -146,7 +146,7 @@
   font-weight: bolder;
 }
 
-.table-subtitle {
+.section-subtitle {
   margin: 0px;
   padding: 0px;
   width: 60%;
