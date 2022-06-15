@@ -282,6 +282,7 @@ margin:60px auto 40px auto;
   display: flex;
   flex-direction: column;
 }
+
 .footer__columns_content_copyright {
   justify-content: space-between;
   flex-basis: 711px;

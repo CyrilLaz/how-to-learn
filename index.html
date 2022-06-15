@@ -10,39 +10,44 @@
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-  <main class="page">
-    <header class="header">
-      <img class="logo_place_header" src="./images/logo_place_header.svg" alt="Логотип Яндекса Практикум">
-      <h1 class="header__title">Научиться учиться</h1>
-      <h2 class="header__subtitle header__subtitle_place_header">Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни?
-        <a class="header__link link_style_blue" href="#">Узнать &rarr;</a>
-      </h2>
-      <img class="header__image header__image_place_header" src="./images/header-image.png" alt="Рисунок Мальчик с собакой">
-      <div class="header__square-pic header__square-pic_place_header"></div>
-    </header>
+<body class="page"> <!--Необходимо задать класс например page(исправлено)-->
+  <header class="header">
+    <img class="logo_place_header" src="./images/logo_place_header.svg" alt="Логотип Яндекса Практикум"> <!--В соответствии с БЭМ методологией  мы не можем использовать модификатор без модифицируемого блока -->
+    <h1 class="header__title">Научиться учиться</h1>
+    <h2 class="header__subtitle header__subtitle_place_header">Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни? <!--1 Нет необходимости использовать модификатор header__subtitle_place_header, его необходимо удалить2 Для подзаголовков хорошей практикой является использование элемента <p>. -->
+      <a class="header__link link_style_blue" href="#">Узнать &rarr;</a> <!-- Нет необходимости использовать модификатор link_style_blue, его необходимо удалить -->
+    </h2>
+    <img class="header__image header__image_place_header" src="./images/header-image.png" alt="Рисунок Мальчик с собакой"> <!--Необходимо использовать наименование из брифа Блок header, элемент main-illustration, нет необходимости использовать модификатор
+      -->
+    <div class="header__square-pic header__square-pic_place_header"></div> <!--В модификаторе нет необходимости его необходимо удалить -->
+  </header>
+  <main class="main"> <!--(исправлено)1 для тега main необходимо использовать класс main 2 Тег main необходимо открыть после закрывающего тега header, и закрыть перед footer-->
     <section class="page__section description ">
-      <div class= "two-columns">
+      <div class= "two-columns"> <!--Можно использовать тег article-->
         <h2 class="two-columns__brief ">Главные проблемы в обучении</h2>
         <div class="two-columns__main-text">
-          <p class="two-columns__main-text_Paragraph">Ни в школе, ни в институте нас не учат тому, как правильно изучать материал. Мы готовимся к экзаменам и учим билеты. Мы тренируемся решать однообразные задачи, чтобы лучше сдать тест, но часто в итоге это не дает нам реального знания. Зубрежка быстро выветривается и не приносит пользы.</p>
-          <p class="two-columns__main-text_Paragraph two-columns__main-text_space_around"><span class="two-columns__main-text_span-accent">Вывод: </span>учиться тоже нужно уметь, но почему-то этому мало где учат. Что с этим делать?</p>
+          <p class="two-columns__main-text_Paragraph">Ни в школе, ни в институте нас не учат тому, как правильно изучать материал. Мы готовимся к экзаменам и учим билеты. Мы тренируемся решать однообразные задачи, чтобы лучше сдать тест, но часто в итоге это не дает нам реального знания. Зубрежка быстро выветривается и не приносит пользы.</p> <!--Необходимо использовать наименование из брифа -->
+          <p class="two-columns__main-text_Paragraph two-columns__main-text_space_around"><span class="two-columns__main-text_span-accent">Вывод: </span>учиться тоже нужно уметь, но почему-то этому мало где учат. Что с этим делать?</p> <!--1 Необходимо использовать наименование из брифа
+            2 В  модификаторе нет необходимости
+            3 для span так же необходимо использовать наименование из брифа-->
           <p class="two-columns__main-text_Paragraph">Конкретные техники и упражнения помогают изменить подход к обучению, сделать его эффективным и захватывающим. Эти же техники применяются на примере обучения в Практикуме.</p>
         </div>
       </div>
     </section>
-    <section class="page__section digits">
-      <h2 class="section-title title_position_center">Цифры и факты</h2>
-      <h3 class="section-subtitle title_position_center">Про учёбу и мозг</h3>
-      <div class="table">
+    <section class="page__section digits"> <!--Если хотите использовать микс (совмещать поведение и стили нескольких БЭМ-сущностей без дублирования кода;) необходимо правильно наименовать его, сейчас page__section является элементом от клаccа page , это не является корректным , для валидности кода необходимо подправить наименование https://ru.bem.info/methodology/key-concepts/#%D0%BC%D0%B8%D0%BA%D1%81-->
+      <h2 class="section-title title_position_center">Цифры и факты</h2> <!--Модификатор используется без модифицируемого блока, в нем нет необходимости, его необходимо удалить -->
+      <h3 class="section-subtitle title_position_center">Про учёбу и мозг</h3> <!--1 Модификатор используется без модифицируемого блока, в нем нет необходимости, его необходимо удалить
+        2 Для подзаголовков хорошей практикой является использование элемента <p>.-->
+      <div class="table"> <!--Для улучшения семантики перечисляемые блоки можно выделить в список ul.
+        Обратите внимание, что у списков следует убрать стандартные стили: margin, padding, list-style-type-->
         <div class="table__cell ">
-          <h4 class="table__heading">86 миллиардов</h4>
+          <h4 class="table__heading">86 миллиардов</h4> <!--Сематически верным решением будет использовать заголовок на уровень меньше -->
           <p class="table__text">Число нейронов в мозге человека</p>
         </div>
         <div class="table__cell">
           <h4 class="table__heading">2.1 миллиарда</h4>
           <p class="table__text">Число нуждающихся в повышении квалификации</p>
-          <p class="table__text table__text_sourse">Всемирный Банк, 2017</p>
+          <p class="table__text table__text_sourse">Всемирный Банк, 2017</p> <!--В модификаторе нет необходимости, его необходимо удалить-->
         </div>
         <div class="table__cell">
           <h4 class="table__heading">1000 терабайт</h4>
@@ -55,7 +60,7 @@
         <div class="table__cell">
           <h4 class="table__heading">420 миллионов</h4>
           <p class="table__text">Число взрослых людей моложе 25 лет, не имеющих образования для трудоустройства</p>
-          <p class="table__text table__text_sourse">Всемирный Банк, 2017</p>
+          <p class="table__text table__text_sourse">Всемирный Банк, 2017</p> <!--В модификаторе нет необходимости, его необходимо удалить-->
         </div>
         <div class="table__cell">
           <h4 class="table__heading">17–20 лет</h4>
@@ -72,17 +77,22 @@
       </div>
     </section>
     <section class="page__section feynman">
-      <h2 class="feynman__title title_position_center">Метод Фейнмана</h2>
-      <h2 class="feynman__subtitle title_position_center">Выучить и не забыть.</h2>
-      <a class="feynman__link feynman__link_position link_style_blue" href="#">Подробнее &rarr;</a>
+      <h2 class="feynman__title title_position_center">Метод Фейнмана</h2> <!--Модификатор используется без модифицируемого блока, в нем нет необходимости, его необходимо удалить-->
+      <h2 class="feynman__subtitle title_position_center">Выучить и не забыть.</h2> <!--1 Для подзаголовков хорошей практикой является использование элемента <p>.
+        2 Модификатор используется без модифицируемого блока, в нем нет необходимости, его необходимо удалить -->
+      <a class="feynman__link feynman__link_position link_style_blue" href="#">Подробнее &rarr;</a> <!--В классах feynman__link_position link_style_blue, нет необходимости, их необходимо удалить -->
     </section>
     <section class="page__section kaufman">
-      <h2 class="section-title table__title_theme_dark title_position_center">Принципы обучения</h2>
-      <h3 class="section-subtitle table__subtitle_theme_dark title_position_center">от Джоша Кауфмана</h3>
-      <div class="table table_theme_dark">
+      <h2 class="section-title table__title_theme_dark title_position_center">Принципы обучения</h2> <!--1 Необходимо использовать наименование для модификатора из брифа
+        2 Модификатор title_position_center используется без модифицируемого блока, в нем нет необходимости, его необходимо удалить -->
+      <h3 class="section-subtitle table__subtitle_theme_dark title_position_center">от Джоша Кауфмана</h3> <!--1 Необходимо использовать наименование для модификатора из брифа
+        2 Модификатор title_position_center используется без модифицируемого блока, в нем нет необходимости, его необходимо удалить -->
+      <div class="table table_theme_dark"> <!--Для улучшения семантики перечисляемые блоки можно выделить в список ul.
+        Обратите внимание, что у списков следует убрать стандартные стили: margin, padding, list-style-type
+        -->
         <div class="table__cell table__cell_theme_dark">
           <h4 class="table__heading table__heading_theme_dark">1</h4>
-          <p class="table__text table__text">Выберите привлекательный проект.</p>
+          <p class="table__text table__text">Выберите привлекательный проект.</p> <!--Наименование для модификатора необходимо использовать из брифа -->
         </div>
         <div class="table__cell table__cell_theme_dark">
           <h4 class="table__heading table__heading_theme_dark">2</h4>
@@ -120,39 +130,52 @@
           <h4 class="table__heading table__heading_theme_dark">10</h4>
           <p class="table__text table__text">Уделяйте внимание количеству и скорости.</p>
         </div>
-        <img class="kaufman__triangle" src="./images/kaufman-triangle.svg" alt="Изображение треугольника">
+        <img class="kaufman__triangle" src="./images/kaufman-triangle.svg" alt="Изображение треугольника"> <!--Изображение необходимо расположить на фон тега div, с классом kaufman__triangle-->
       </div>
     </section>
-    <footer class="footer">
-      <div class="footer__columns">
-        <div class="footer__columns_content footer__columns_content_copyright">
-          <img class="logo_place_footer" src="./images/logo_place_footer.svg" alt="Логотип Яндекса Практикум">
-          <address class="footer__author">&copy; Виктор Абанькин</address>
-        </div>
-        <div class="footer__columns_content footer__columns_content_info">
-          <h3 class="footer__columns-heading">О Практикуме</h3>
-          <div class="footer__columns-links">
-            <a class="footer__columns-link" href="#">Главная</a>
-            <a class="footer__columns-link" href="#">Концепция</a>
-            <a class="footer__columns-link" href="#">Наставники</a>
-          </div>
-        </div>
-        <div class="footer__columns_content_social">
-          <h3 class="footer__columns-heading">Соцсети</h3>
-          <div class="footer__columns-links">
-            <a class="footer__columns-link" href="#">
-              <img class="footer__social-icon" src="./images/facebook_color_white.svg" alt="Рисунок логотипа Facebook">Facebook
-            </a>
-            <a class="footer__columns-link" href="#">
-              <img class="footer__social-icon" src="./images/vk_color_white.svg" alt="Рисунок логотипа ВКонтакте">ВКонтакте
-            </a>
-            <a class="footer__columns-link" href="#">
-              <img class="footer__social-icon" src="./images/facebook_color_white.svg" alt="Рисунок логотипа Instagram">Instagram
-            </a>
-          </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__columns">
+      <div class="footer__columns_content footer__columns_content_copyright"> <!--Необходимо использовать класс из брифа
+        Блок footer, элемент column, модификатор content со значением copyright-->
+        <img class="logo_place_footer" src="./images/logo_place_footer.svg" alt="Логотип Яндекса Практикум"> <!--В соответствии с БЭМ методологией  мы не можем использовать модификатор без модифицируемого блока -->
+        <address class="footer__author">&copy; Виктор Абанькин</address> <!--Для представления адреса, который не является контактной информацией, воспользуйтесь <p> элементом.-->
+      </div>
+      <div class="footer__columns_content footer__columns_content_info"> <!--Необходимо использовать класс из брифа
+        Блок footer, элемент column, модификатор content со значением info
+          Напомню модификатор не может использоваться без модифицируемого блока -->
+        <h3 class="footer__columns-heading">О Практикуме</h3> <!--1 Сематически верным решением будет использовать заголовок на уровень выше
+            2 Необходимо использовать класс из брифа
+            Блок footer, элемент column-heading-->
+        <div class="footer__columns-links"> <!--1 Обертка для данных элементов - тег <nav>.
+            Этим элементом принято выделять список из ссылок, отвечающий за навигацию по сайту и не только. Добавление этого элемента улучшает восприятие вашей верстке машинами, в т.ч скринридерами.
+            Можно использовать несколько тегов nav в проекте.
+            2 Необходимо использовать класс из брифа  Блок footer, элемент column-links-->
+          <a class="footer__columns-link" href="#">Главная</a> <!--Необходимо использовать класс из брифа Блок footer, элемент column-link-->
+          <a class="footer__columns-link" href="#">Концепция</a>
+          <a class="footer__columns-link" href="#">Наставники</a>
         </div>
       </div>
-    </footer>
-</main>
+      <div class="footer__columns_content_social"><!--Необходимо использовать класс из брифа
+          Блок footer, элемент column, модификатор content со значением social
+          Напомню модификатор не может использоваться без модифицируемого блока
+          -->
+        <h3 class="footer__columns-heading">Соцсети</h3> <!--1 Сематически верным решением будет использовать заголовок на уровень выше
+            2 Необходимо использовать класс из брифа
+            Блок footer, элемент column-heading-->
+        <div class="footer__columns-links"> <!--Необходимо использовать класс из брифа Блок footer, элемент column-link-->
+          <a class="footer__columns-link" href="#"> <!--<a class="footer__columns-link" href="#">Необходимо использовать класс из брифа Блок footer, элемент column-link-->
+            <img class="footer__social-icon" src="./images/facebook_color_white.svg" alt="Рисунок логотипа Facebook">Facebook
+          </a>
+          <a class="footer__columns-link" href="#">
+            <img class="footer__social-icon" src="./images/vk_color_white.svg" alt="Рисунок логотипа ВКонтакте">ВКонтакте
+          </a>
+          <a class="footer__columns-link" href="#">
+            <img class="footer__social-icon" src="./images/facebook_color_white.svg" alt="Рисунок логотипа Instagram">Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
