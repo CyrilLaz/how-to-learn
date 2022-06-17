@@ -1,7 +1,5 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
   margin: 0 auto;
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -56,6 +54,8 @@
   font-weight: bold;
   margin: 0px 0px 0px 64px;
   z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .header__subtitle {
@@ -281,7 +281,7 @@
 
 .footer {
   min-height: 350px;
-  background-color:  #1f1f1f;
+  background-color: #1f1f1f;
   display: flex;
 }
 
@@ -292,7 +292,7 @@
   margin:60px auto 40px auto;
 }
 
-.footer__column_content {
+.footer__column {
   display: flex;
   flex-direction: column;
 }
@@ -351,26 +351,7 @@
   margin-bottom: 16px;
 }
 
-.active-link:hover {
-  text-shadow:
-  0 0 2px #0000,
-  0 0 5px #0000,
-  0 0 10px #0000,
-  0 0 20px #0000,
-  0 0 30px #0000,
-  0 0 40px #2f80ed,
-  0 0 50px #2f80ed,
-  0 0 60px #2f80ed,
-  0 0 70px #2f80ed,
-  0 0 80px #2f80ed,
-  0 0 90px #2f80ed,
-  0 0 100px #2f80ed,
-  0 0 120px #2f80ed,
-  0 0 150px #2f80ed;
-  color: #ffffff;
-}
-
-.footer__column-link_active:hover {
+.footer__column-link:hover {
   text-shadow:
   0 0 2px #000000,
   0 0 5px #000000,
@@ -379,22 +360,10 @@
   0 0 30px #ffffff;
 }
 
-.footer__column_active:hover {
+.header__title:hover::after {
+  content: ' Sorry, я еще не маг, только учусь, спасибо';
+  text-align: center;
+  color: rgba(205, 214, 219, 0.3);
   text-shadow:
-    /* White glow */
-  0 0 2px #ffffff,
-  0 0 5px #ffffff,
-  0 0 10px #ffffff,
-  0 0 20px #ffffff,
-  0 0 30px #ffffff,
-  0 0 40px #2f80ed,
-  0 0 50px #2f80ed,
-  0 0 60px #2f80ed,
-  0 0 70px #2f80ed,
-  0 0 80px #2f80ed,
-  0 0 90px #2f80ed,
-  0 0 100px #2f80ed,
-  0 0 120px #2f80ed,
-  0 0 150px #2f80ed,
-  0 0 200px #2f80ed;
+  0 0 30px #ffffff;
 }
