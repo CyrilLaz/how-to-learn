@@ -1,5 +1,8 @@
 .video__frame {
 margin-left: 20px;
+width: 515px;
+height: 316px;
+border: none;
 }
 
 .video__frame:last-child {
