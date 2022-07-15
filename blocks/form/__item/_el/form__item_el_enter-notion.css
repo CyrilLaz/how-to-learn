@@ -1,0 +1,15 @@
+.form__item_el_enter-notion {
+  height: 160px;
+  width: 400px;
+  resize: none;
+  border-radius: 35px;
+  margin: 30px auto auto 36px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  font-family: inherit;
+  color: black;
+  border-radius: 35px;
+}

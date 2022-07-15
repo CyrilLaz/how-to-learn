@@ -1,0 +1,13 @@
+.form_is-closed {
+height: 1px;
+}
+
+.form_is-closed .form__toggle-image {
+  transform: rotate(270deg);
+}
+
+/*
+.form_is-closed .form__toggle {
+top: 320px;
+}
+*/

@@ -1,0 +1,19 @@
+.form__button {
+  height: 50px;
+  width: 50px;
+  background-color: #2f80ed;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-position: center;
+}
+
+.form__button[type="submit"] {
+  background-image: url(/images/form-buttom-send.svg);
+  margin-top: 60px
+}
+
+.form__button[type="reset"] {
+  background-image: url(/images/form_buttom_reset.svg);
+}

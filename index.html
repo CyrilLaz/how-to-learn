@@ -8,6 +8,7 @@
   <meta name="author" content="Кирилл Лазар">
   <title>Научиться учиться</title>
   <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="./pages/forma.css">
 </head>
 <body class="page">
   <!--Edsger Dijkstra: If debugging is the process of removing software bugs, then programming must be the process of putting them in.-->
@@ -188,9 +189,33 @@
       </ul>
       <div class="kaufman__triangle rotation"></div>
     </section>
+    <section class="form">
+      <div class="form__toggle">
+        <img class="form__toggle-image" src="https://pictures.s3.yandex.net/html-forms/close_icon.png">
+      </div>
+      <div class="form__container">
+        <form class="form__notion">
+          <h2 class="form__header">Заметь своё окружение</h2>
+          <div class="form__flex-box">
+          <fieldset class="form__input-container">
+            <input maxlength="15" name="name" type="text" placeholder="Введи свое имя Герой" class="form__item form__item_el_name" required>
+            <textarea maxlength="90" name="enter-note" type="text" placeholder="текст заметки" class="form__item form__item_el_enter-notion" required></textarea>
+          </fieldset>
+          <fieldset class="form__handlers">
+            <input type="submit" value="" class="form__button">
+            <input type="reset" value="" class="form__button">
+          </fieldset>
+          <div class="form__item form__item_el_text">
+            <p class="form__notion-text">Мир тебя заметил, герой.</p>
+          </div>
+        </div>
+        </form>
+      </div>
+     <!--<div class="form__line form__line_border-buttom"></div>-->
+    </section>
     <section class="resources centered-block">
-      <h2 class="section-title">Цифры и факты</h2>
-      <p class="section-subtitle">Про учёбу и мозг</p>
+      <h2 class="section-title">Полезные ресурсы</h2>
+      <p class="section-subtitle">Больше материалов о техниках и лайфхаках обучения</p>
       <ul class="resources__logo-zone">
         <li>
           <a class="resources__link" href="#" target="_blank"><img class="resources__logo" src="./images_sprint-2/logo/resources-arzamas.svg" alt="Cсылка на Арзамас"/></a>
@@ -232,5 +257,6 @@
       </div>
     </div>
   </footer>
+<!--<script src="script.js"></script>-->
 </body>
 </html>

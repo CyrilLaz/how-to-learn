@@ -1,0 +1,6 @@
+.form__item_el_text {
+  max-height: 160px;
+  max-width: 400px;
+  border-radius: 35px;
+  text-align: center;
+}
